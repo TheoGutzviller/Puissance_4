@@ -22,6 +22,7 @@ class Joueur:
         Joueur.Couleur = Couleur
 
 
+
 class Grille:
     Pions = list(pions)
 
