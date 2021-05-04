@@ -8,7 +8,7 @@ ligne = 0
 colonne = 0
 taille_jeton = 40
 
-Joueur1 = Objet.Joueur()
+Joueur1 = Objet
 Joueur2 = Objet.Joueur()
 
 def setup():
@@ -19,8 +19,8 @@ def setup():
 
 def run():
     print(Joueur1.Get_Nom())
-
-
+    Joueur1.Set_Nom("Yassin")
+    print(Joueur1.Get_Nom())
 
 
 
