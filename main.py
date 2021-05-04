@@ -10,6 +10,7 @@ def setup():
     Graphic.Init_jeux()
 
 
+
 def run():
 
     for i in range(6):
