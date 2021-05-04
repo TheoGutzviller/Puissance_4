@@ -1,11 +1,16 @@
 class Joueur:
-    nom = ""
+    nom = "kevin"
     score = 0
     couleur = [255,255,255]
 
-    def get_nom(self):
-         print("coucou")
+    def Get_Nom(self):
+         return Joueur.nom
+
+    def Set_Nom(Nom):
+        print("dshbbdfihd")
+
     #methods get_nom / set_Nom
+
 
 
 class Grille:
@@ -21,11 +26,11 @@ class Grille:
                 pygame.draw.circle(core.screen, blanc, (colonne, ligne), taille_jeton)
 
 class pions:
-    print("coucou")
+    print("coucou1")
 
 class emplacement:
-    print("coucou")
+    print("coucou2")
 
 class partie:
-    print("coucou")
+    print("coucou3")
 

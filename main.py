@@ -13,14 +13,13 @@ Joueur2 = Objet.Joueur()
 
 def setup():
 
-    Graphic.Init_jeux(taille_jeton)
-
-
     Joueur1.couleur = [255,0,0]
     Joueur2.couleur = [255, 215, 0]
+
+
 def run():
-    print("coucou")
-    Objet.Grille.miseEnPlace(self=0)
+    print(Joueur1.Get_Nom())
+
 
 
 
