@@ -1,23 +1,26 @@
 import pygame
 import core
 import Graphic
-ligne = 30
-colonne = 30
+import Objet
+
+blanc = [255, 255, 255]
+ligne = 0
+colonne = 0
 taille_jeton = 40
+
+Joueur1 = Objet.Joueur()
+Joueur2 = Objet.Joueur()
 
 def setup():
 
-    Graphic.Init_jeux()
+    Graphic.Init_jeux(taille_jeton)
 
 
-
+    Joueur1.couleur = [255,0,0]
+    Joueur2.couleur = [255, 215, 0]
 def run():
-
-    for i in range(6):
-        for y in range(7):
-            colonne = taille_jeton+ 10 + y*100
-            ligne = taille_jeton + 10 + i*100
-            pygame.draw.circle(core.screen, (255, 255, 255), (colonne, ligne), taille_jeton)
+    print("coucou")
+    Objet.Grille.miseEnPlace(self=0)
 
 
 
