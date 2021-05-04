@@ -6,7 +6,7 @@ colonne = 30
 taille_jeton = 40
 
 def setup():
-    print("bite")
+
     Graphic.Init_jeux()
 
 
