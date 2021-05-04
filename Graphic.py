@@ -17,3 +17,4 @@ class GUI (self):
     def Affich_score(self):
         print("jvfhku")
 
+
