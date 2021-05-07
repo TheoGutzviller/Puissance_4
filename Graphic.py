@@ -21,8 +21,7 @@ class GUI:
             for y in range (6):
                 pg.draw.circle(core.screen, Variable.blanc, ((Variable.Taille_pions+10)+(i*(Variable.Taille_pions*2+10)), (Variable.Taille_pions+10)+(y*(Variable.Taille_pions*2+10))), Variable.Taille_pions)
 
-    def InfoBox(self):
-        global screen
+    def InfoBox(self, screen):
         clock = pg.time.Clock()
         input_box1 = TexteInput.InputBox(600, 700, 140, 32)
         input_box2 = TexteInput.InputBox(100, 700, 140, 32)
@@ -30,6 +29,7 @@ class GUI:
         done = False
 
         while not done:
+
             for event in pg.event.get():
                 if event.type == pg.QUIT:
                     done = True
