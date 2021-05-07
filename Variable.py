@@ -1,3 +1,3 @@
 blanc = [255, 255, 255]
-Taille_fenetre = []
-Taille_pions = 0
+Taille_fenetre = [640,800]
+Taille_pions = 40

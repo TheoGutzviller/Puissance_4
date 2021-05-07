@@ -3,7 +3,7 @@ import Variable
 
 
 class Joueur:
-    nom = "kevin"
+    nom = "Kevin <3"
     score = 0
     couleur = [255, 255, 255]
 
