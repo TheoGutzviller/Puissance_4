@@ -24,8 +24,9 @@ def run():
     print(Joueur1.Get_Nom())
     Joueur1.Set_Nom("Yassin")
     print(Joueur1.Get_Nom())
+
     Fenetre.Mise_en_Place_Pions()
-    Espacement_inter_pions = Variable.Taille_pions + 20
+
 
 
 core.main(setup, run)

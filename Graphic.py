@@ -1,7 +1,8 @@
 import core
-import pygame
+import pygame as pg
 import Variable
 import Objet
+import TexteInput
 
 
 
@@ -18,12 +19,13 @@ class GUI:
         print("jdsnsonqs")
         for i in range (7):
             for y in range (6):
-                pygame.draw.circle(core.screen, Variable.blanc, ((Variable.Taille_pions+10)+(i*(Variable.Taille_pions*2+10)), (Variable.Taille_pions+10)+(y*(Variable.Taille_pions*2+10))), Variable.Taille_pions)
+                pg.draw.circle(core.screen, Variable.blanc, ((Variable.Taille_pions+10)+(i*(Variable.Taille_pions*2+10)), (Variable.Taille_pions+10)+(y*(Variable.Taille_pions*2+10))), Variable.Taille_pions)
 
     def InfoBox(self):
+        global screen
         clock = pg.time.Clock()
-        input_box1 = InputBox(600, 700, 140, 32)
-        input_box2 = InputBox(100, 700, 140, 32)
+        input_box1 = TexteInput.InputBox(600, 700, 140, 32)
+        input_box2 = TexteInput.InputBox(100, 700, 140, 32)
         input_boxes = [input_box1, input_box2]
         done = False
 

@@ -54,5 +54,5 @@ class InputBox:
 
 
 if __name__ == '__main__':
-    main()
+    #main()
     pg.quit()
