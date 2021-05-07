@@ -1,14 +1,15 @@
 import core
 import pygame
+import Variable
 import Objet
 
 
 
-class GUI (self):
+class GUI:
 
-    core.WINDOW_SIZE = Taille_fenetre
+    core.WINDOW_SIZE = Variable.Taille_fenetre
     Taille_fenetre = [400, 400]
-    Espacement_inter_pions = Taille_pions + 20
+    Espacement_inter_pions = Variable.Taille_pions + 20
 
 
     def Affich_pos_pions(self):

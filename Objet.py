@@ -1,4 +1,6 @@
+import pygame
 import Variable
+
 
 class Joueur:
     nom = "kevin"
@@ -21,10 +23,9 @@ class Joueur:
         Joueur.Couleur = Couleur
 
 
-
-
-class Pion:
-    Couleur = blanc
+class Pions:
+    global blanc
+    Couleur = Variable.blanc
     Taille_pions = 40
 
     def Get_Case(self):
@@ -33,7 +34,9 @@ class Pion:
     def Set_Case(self):
         print("dfhjbkBQ")
 
+
 class Grille:
+    global core
     pions = []
 
     def miseEnPlace(self, taille_jeton):
@@ -48,10 +51,9 @@ class Grille:
                 pygame.draw.circle(core.screen, blanc, (colonne, ligne), taille_jeton)
 
 
-
-
 class Case:
-    Couleur = blanc
+    global blanc
+    Couleur = Variable.blanc
 
     def CaseVide(self):
         print("qs")
@@ -59,5 +61,10 @@ class Case:
     def Contenu(self):
         print("s")
 
-class partie:
-    print("coucou3")
+
+class Partie:
+    Joueur_1 = Joueur
+    Joueur_2 = Joueur
+
+    def MiseEnPlace(self):
+        print("qkbks")
