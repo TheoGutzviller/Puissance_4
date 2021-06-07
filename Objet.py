@@ -25,14 +25,15 @@ class Joueur:
 
 class Pions:
     global blanc
-    Couleur = Variable.blanc
+    Couleur = Variable.couleur
     Taille_pions = 40
+    case = [0,0]
 
     def Get_Case(self):
-        print("sdhbqs")
+        return Pions.Couleur
 
-    def Set_Case(self):
-        print("dfhjbkBQ")
+    def Set_Case(self,case):
+        Pions.Couleur = Nom
 
 
 class Grille:
@@ -53,18 +54,21 @@ class Grille:
 
 class Case:
     global blanc
-    Couleur = Variable.blanc
+    Couleur = Variable.couleur
 
     def CaseVide(self):
-        print("qs")
+        print("vide")
 
     def Contenu(self):
-        print("s")
+        if (Variable.blanc == couleur) :
+            print("vide")
+        else:
+            print("plein")
 
 
 class Partie:
-    Joueur_1 = Joueur
-    Joueur_2 = Joueur
+
 
     def MiseEnPlace(self):
-        print("qkbks")
+        Joueur_1 = Joueur
+        Joueur_2 = Joueur
