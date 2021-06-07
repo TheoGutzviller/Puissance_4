@@ -29,7 +29,6 @@ def setup():
     print("quel est le nom de joueur 1 ?")
 
     Joueur1.Set_Nom(input())
-
     print("quel est le nom de joueur 2 ?")
 
     Joueur2.Set_Nom(input())
