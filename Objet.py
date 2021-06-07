@@ -32,8 +32,8 @@ class Pions:
     def Get_Case(self):
         return Pions.Couleur
 
-    def Set_Case(self,case):
-        Pions.Couleur = Nom
+    def Set_Case(self,couleur=[0,0,0]):
+        Pions.Couleur = couleur
 
 
 class Grille:
@@ -53,7 +53,7 @@ class Grille:
 
 
 class Case:
-    global blanc
+
     Couleur = Variable.couleur
 
     def CaseVide(self):
@@ -64,6 +64,8 @@ class Case:
             print("vide")
         else:
             print("plein")
+
+
 
 
 class Partie:
