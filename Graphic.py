@@ -18,6 +18,7 @@ class GUI:
     def Mise_en_Place_Pions(self):
         for i in range (7):
             for y in range (6):
+
                 pg.draw.circle(core.screen, Variable.couleur, (((Variable.Taille_pions+10)+(i*(Variable.Taille_pions*2+10))), ((Variable.Taille_pions+10)+(y*(Variable.Taille_pions*2+10)))), Variable.Taille_pions)
 
     def InfoBox(self, screen):
