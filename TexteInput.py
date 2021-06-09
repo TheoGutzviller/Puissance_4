@@ -10,16 +10,18 @@ FONT = pg.font.Font(None, 32)
 
 
 class InputBox:
+    carac = ""
 
     def __init__(self, x, y, w, h, text=''):
         self.rect = pg.Rect(x, y, w, h)
         self.color = COLOR_INACTIVE
         self.text = text
+
         self.txt_surface = FONT.render(text, True, self.color)
         self.active = False
 
     def handle_event(self, event):
-
+        global carac
         if event.type == pg.MOUSEBUTTONDOWN:
             # If the user clicked on the input_box rect.
             if self.rect.collidepoint(event.pos):
@@ -29,13 +31,12 @@ class InputBox:
                 self.active = False
             # Change the current color of the input box.
             self.color = COLOR_ACTIVE if self.active else COLOR_INACTIVE
+
         if event.type == pg.KEYDOWN:
             if self.active:
                 if event.key == pg.K_RETURN:
                     print(self.text)
-                    Variable.temp = self.text
-
-                    self.text = ''
+                    carac=self.text
 
                 elif event.key == pg.K_BACKSPACE:
                     self.text = self.text[:-1]
