@@ -6,17 +6,25 @@ import TexteInput
 
 
 class GUI:
+    global list_cases
 
     def Affich_pos_pions(self):
-        print("jvfhku")
+        print("mdr")
+        i=0
+        y=0
+        pg.draw.circle(core.screen, list_cases[0].couleur, (
+        ((Variable.Taille_pions + 10) + (i * (Variable.Taille_pions * 2 + 10))),
+        ((Variable.Taille_pions + 10) + (y * (Variable.Taille_pions * 2 + 10)))), Variable.Taille_pions)
+
 
     def Affich_score(self):
         print("jvfhku")
 
     def Mise_en_Place_Pions(self):
-        for i in range(7):
-            for y in range(6):
-                pg.draw.circle(core.screen, Variable.rouge, (((Variable.Taille_pions + 10) + (i * (Variable.Taille_pions * 2 + 10))),((Variable.Taille_pions + 10) + (y * (Variable.Taille_pions * 2 + 10)))), Variable.Taille_pions)
+        for i in range(6):
+            for y in range(7):
+
+                pg.draw.circle(core.screen, Variable.couleur, (((Variable.Taille_pions + 10) + (y * (Variable.Taille_pions * 2 + 10))),((Variable.Taille_pions + 10) + (i * (Variable.Taille_pions * 2 + 10)))), Variable.Taille_pions)
 
     def InfoBox(self, screen):
         clock = pg.time.Clock()

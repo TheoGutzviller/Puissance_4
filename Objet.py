@@ -5,22 +5,22 @@ import Variable
 class Joueur:
     nom = "Kevin <3"
     score = 0
-    couleur = [255, 255, 255]
+    Couleur = [255, 255, 255]
 
     def Get_Nom(self):
         return Joueur.nom
 
     def Set_Nom(self, Nom):
-        Joueur.nom = Nom
+        self.nom = Nom
 
     def Get_Score(self):
-        return Joueur.score
+        return self.score
 
     def Get_Couleur(self):
-        return Joueur.couleur
+        return self.Couleur
 
     def Set_Couleur(self, Couleur):
-        Joueur.Couleur = Couleur
+        self.Couleur = Couleur
 
 
 class Pions:
@@ -33,7 +33,7 @@ class Pions:
         return Pions.Couleur
 
     def Set_Case(self,couleur=[0,0,0]):
-        Pions.Couleur = couleur
+        self.Couleur = couleur
 
 
 class Grille:
@@ -49,14 +49,14 @@ class Grille:
                 colonne = taille_jeton + 20 + y * 120
                 ligne = taille_jeton + 100 + i * 120
 
-                pygame.draw.circle(core.screen, blanc, (colonne, ligne), taille_jeton)
+                pg.draw.circle(core.screen, blanc, (colonne, ligne), taille_jeton)
 
 
 class Case:
 
-    Couleur = Variable.couleur
+    Couleur = Variable.blanc
 
-    def CaseVide(self):
+    def Case_Vide(self):
         print("vide")
 
     def Contenu(self):
@@ -65,6 +65,12 @@ class Case:
         else:
             print("plein")
 
+    def Get_Couleur(self):
+        return self.Couleur
+
+    def Set_Couleur(self,couleur=[0,0,0]):
+        self.Couleur = couleur
+
 
 
 
@@ -72,5 +78,5 @@ class Partie:
 
 
     def MiseEnPlace(self):
-        Joueur_1 = Joueur
-        Joueur_2 = Joueur
+        Joueur_1 = Joueur()
+        Joueur_2 = Joueur()
