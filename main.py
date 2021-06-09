@@ -39,17 +39,8 @@ def setup():
 
 def run():
     global Info
-
     Fenetre.Mise_en_Place_Pions()
-
-
-    for w in range(22):
-        print("tkt")
-
-
-    if w==21:
-        while True:
-            print("kodso")
+    Fenetre.InfoBox(core.screen)
 
 
 

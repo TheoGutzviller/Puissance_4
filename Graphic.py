@@ -5,9 +5,7 @@ import Objet
 import TexteInput
 
 
-
 class GUI:
-
 
     def Affich_pos_pions(self):
         print("jvfhku")
@@ -16,17 +14,19 @@ class GUI:
         print("jvfhku")
 
     def Mise_en_Place_Pions(self):
-        for i in range (7):
-            for y in range (6):
-
-                pg.draw.circle(core.screen, Variable.couleur, (((Variable.Taille_pions+10)+(i*(Variable.Taille_pions*2+10))), ((Variable.Taille_pions+10)+(y*(Variable.Taille_pions*2+10)))), Variable.Taille_pions)
+        for i in range(7):
+            for y in range(6):
+                pg.draw.circle(core.screen, Variable.couleur, (
+                ((Variable.Taille_pions + 10) + (i * (Variable.Taille_pions * 2 + 10))),
+                ((Variable.Taille_pions + 10) + (y * (Variable.Taille_pions * 2 + 10)))), Variable.Taille_pions)
 
     def InfoBox(self, screen):
         clock = pg.time.Clock()
-        input_box1 = TexteInput.InputBox(600, 700, 140, 32)
-        input_box2 = TexteInput.InputBox(100, 700, 140, 32)
+        input_box1 = TexteInput.InputBox(400, 700, 140, 32)
+        input_box2 = TexteInput.InputBox(50, 700, 140, 32)
         input_boxes = [input_box1, input_box2]
         done = False
+        val = ""
 
         while not done:
 
@@ -35,9 +35,13 @@ class GUI:
                     done = True
                 for box in input_boxes:
                     box.handle_event(event)
+                    print("__________")
+                    print(Variable.temp)
+                    print("__________")
 
             for box in input_boxes:
                 box.update()
+
 
             screen.fill((30, 30, 30))
             for box in input_boxes:
@@ -45,6 +49,3 @@ class GUI:
 
             pg.display.flip()
             clock.tick(30)
-
-
-

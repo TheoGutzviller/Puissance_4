@@ -1,4 +1,6 @@
 import pygame as pg
+import Variable
+
 
 
 pg.init()
@@ -17,6 +19,7 @@ class InputBox:
         self.active = False
 
     def handle_event(self, event):
+
         if event.type == pg.MOUSEBUTTONDOWN:
             # If the user clicked on the input_box rect.
             if self.rect.collidepoint(event.pos):
@@ -30,7 +33,10 @@ class InputBox:
             if self.active:
                 if event.key == pg.K_RETURN:
                     print(self.text)
+                    Variable.temp = self.text
+
                     self.text = ''
+
                 elif event.key == pg.K_BACKSPACE:
                     self.text = self.text[:-1]
                 else:
