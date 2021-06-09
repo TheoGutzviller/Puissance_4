@@ -39,8 +39,10 @@ def setup():
 
 def run():
     global Info
+    print(Variable.couleur)
     Fenetre.Mise_en_Place_Pions()
-    Fenetre.InfoBox(core.screen)
+
+
 
 
 
