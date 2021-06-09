@@ -75,8 +75,11 @@ class Case:
 
 
 class Partie:
-
+    nb_manche=0
 
     def MiseEnPlace(self):
         Joueur_1 = Joueur()
         Joueur_2 = Joueur()
+
+    def Check_gangant(self,case=[], position_case=0):
+        print("theo not ok")
